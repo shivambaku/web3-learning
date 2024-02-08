@@ -11,6 +11,7 @@ async function main() {
   console.log("SimpleStorage deployed to:", contractAddress);
 
   if (network.config.chainId === 11155111 && process.env.ETHERSCAN_API_KEY) {
+    console.log("Waiting for more blocks to verify contract...");
     await simpleStorage.deploymentTransaction()!.wait(5);
     await verify(contractAddress, []);
   }
