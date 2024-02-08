@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "deploy": "bun run ./deploy.js",
+    "compile": "bun solcjs --bin --abi --include-path node_module/ --base-path . -o ./bin SimpleStorage.sol"
+  },
+  "dependencies": {
+    "ethers": "^6.10.0",
+    "solc": "^0.8.24"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "name": "web3-learning",
+  "module": "index.ts",
+  "type": "module"
+}
